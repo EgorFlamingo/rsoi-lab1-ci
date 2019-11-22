@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "10.15.3"
+script: 'true'
+deploy:
+  provider: heroku
+  api_key:
+    secure: "H3JqsvVtc8XYKgDcgollm7IIgT98dbIFX8IcslhhGEoKwzMbDDImA5hYbobRrO27sDpzHpO2L07YKbZguAvQJkMRsQn2460gK3x5vZMK2n9D2g0c5fygoCT3s8K+oOhatJBA4sa/0gEzBdXiEbHA5JZFPhTlnDmPJHWilODyiKWhOOqvb/fq4qZynQ6RiEimy8SD91pH/y92JFErfVblstpNyMLavwDBc1uQw7Wwm0iB7TQKjen/a3YRQzWNP4b/lFZj24fN0CwoC/rBfyDzmYikL7kd/AHBMrfL2zWwDCoAjZ8smyxx6HZmyknOGYQFmD1v0ZLp70fdF203cz25yMUtdehMR/pDJfAkijFPS+QhJ3KHV29Xqf6ogSpUkFj7TOpkrvGolFskqw+xAC7z3jdaSk9D1a4Sk7q6drhYuTT7m/qoM+jtdMiyLyIdLL5tUy+vVjLR4s4fEZJba1033zouExo6zBMzKfzoZ843z52RW8XJ94P0Lepgxqa7s9fkAV4PD9+kBCTIdw3evM4uN48KzcfyjbOXupWwPBpnglsFx/lWdr6RLgMySFnqqP4b0iUFraZvgLMo0/9oADLOOsZh9OAwqTuG6Rz/DcQfT8Yw0hrlmhJJxkrRPWlck8tjnzz6PR4hGIIo0KCVMITZJSVAxj6h4q1R0j0epTNCt4w="
+  app: rsoi-lab1-ci
+  on:
+    repo: EgorFlamingo/rsoi-lab1-ci
+    tags: true
+    all_branches: true
+notifications:
+  email: false
