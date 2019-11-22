@@ -9,5 +9,3 @@ deploy:
   app: rsoi-lab1-ci
   on:
     repo: EgorFlamingo/rsoi-lab1-ci
-    tags: true
-    all_branches: true
