@@ -11,5 +11,3 @@ deploy:
     repo: EgorFlamingo/rsoi-lab1-ci
     tags: true
     all_branches: true
-notifications:
-  email: false
