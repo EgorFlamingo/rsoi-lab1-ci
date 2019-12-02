@@ -13,11 +13,11 @@ let should = chai.should();
 chai.use(chaiHttp);
 //Наш основной блок
 describe('Products', () => {
-    //beforeEach((done) => { //Перед каждым тестом чистим базу
-        //Product.remove({}, (err) => { 
-           //done();         
-        //});     
-    //});
+    beforeEach((done) => { //Перед каждым тестом чистим базу
+        Product.remove({}, (err) => { 
+           done();         
+        });     
+    });
 /*
   * Тест для /GET 
   */
