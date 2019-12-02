@@ -10,7 +10,7 @@ app.use(expressLogging(logger));
 
 // Set up mongoose connection
 const mongoose = require('mongoose');
-let dev_db_url = 'mongodb+srv://someuser:abcd1234@cluster0-t1u1y.mongodb.net/test?retryWrites=true';
+let dev_db_url = 'mongodb+srv://someuser:abcd1234@cluster0-t1u1y.mongodb.net/test?retryWrites=true&w=majority';
 const mongoDB = process.env.MONGODB_URI || dev_db_url;
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
@@ -26,3 +26,5 @@ let port = process.env.PORT || 8080;
 app.listen(port, function() {
     console.log('Server is up and running on port numner ' + port);
 });
+
+module.exports = app;
