@@ -1,8 +1,12 @@
 language: node_js
 node_js:
 - 10.15.3
+before_script:
+-  npm install -g mocha
+-  npm install chai
+-  npm install chai-http
 script:
-- npm run test
+-  npm test
 deploy:
   provider: heroku
   api_key:
